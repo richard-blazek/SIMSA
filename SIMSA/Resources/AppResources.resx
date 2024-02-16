@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddAlphabet" xml:space="preserve">
+    <value>Add an alphabet</value>
+  </data>
+  <data name="AlphabetName" xml:space="preserve">
+    <value>Alphabet name</value>
+  </data>
+  <data name="Alphabets" xml:space="preserve">
+    <value>Alphabets</value>
+  </data>
+  <data name="Analyse" xml:space="preserve">
+    <value>Analyse</value>
+  </data>
+  <data name="Ascii" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="BraillePageTitle" xml:space="preserve">
+    <value>Braille alphabet</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ColorConverterPageTitle" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ConvertToBinary" xml:space="preserve">
+    <value>Convert to binary</value>
+  </data>
+  <data name="Czech" xml:space="preserve">
+    <value>Czech</value>
+  </data>
+  <data name="CzechDiacritics" xml:space="preserve">
+    <value>Czech (including diacritics)</value>
+  </data>
+  <data name="Decryption" xml:space="preserve">
+    <value>Decryption</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditAlphabetPageTitle" xml:space="preserve">
+    <value>Edit alphabet</value>
+  </data>
+  <data name="Encryption" xml:space="preserve">
+    <value>Encryption</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="EnglishAlphabet" xml:space="preserve">
+    <value>English alphabet</value>
+  </data>
+  <data name="FindPrimesUpTo" xml:space="preserve">
+    <value>Find primes up to</value>
+  </data>
+  <data name="FlagSemaphorePageTitle" xml:space="preserve">
+    <value>Flag semaphore</value>
+  </data>
+  <data name="FrequencyAnalysisPageTitle" xml:space="preserve">
+    <value>Frequency analysis</value>
+  </data>
+  <data name="FromRadix" xml:space="preserve">
+    <value>From radix</value>
+  </data>
+  <data name="GreekAlphabet" xml:space="preserve">
+    <value>Greek alphabet</value>
+  </data>
+  <data name="HebrewAlphabet" xml:space="preserve">
+    <value>Hebrew alphabet</value>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Invert</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="LettersOfTheAlphabet" xml:space="preserve">
+    <value>Letters of the alphabet</value>
+  </data>
+  <data name="ManageAlphabetsPageTitle" xml:space="preserve">
+    <value>Manage alphabets</value>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Cipher App</value>
+  </data>
+  <data name="Mirror" xml:space="preserve">
+    <value>Mirror</value>
+  </data>
+  <data name="MorseEntryPlaceholder" xml:space="preserve">
+    <value>Dash is "-" dot is "." and separator is "/"</value>
+  </data>
+  <data name="MorsePageTitle" xml:space="preserve">
+    <value>Morse code</value>
+  </data>
+  <data name="NewAlphabet" xml:space="preserve">
+    <value>New alphabet</value>
+  </data>
+  <data name="NumericBase" xml:space="preserve">
+    <value>Numeric base</value>
+  </data>
+  <data name="NumericPageTitle" xml:space="preserve">
+    <value>Number code</value>
+  </data>
+  <data name="NumersSeparatedByComma" xml:space="preserve">
+    <value>Numbers separated by comma</value>
+  </data>
+  <data name="OmittedLetter" xml:space="preserve">
+    <value>Omitted letter</value>
+  </data>
+  <data name="PlayfairPageTitle" xml:space="preserve">
+    <value>Playfair cipher</value>
+  </data>
+  <data name="PrimeCountFormat" xml:space="preserve">
+    <value>Prime count: {0}</value>
+  </data>
+  <data name="PrimesPageTitle" xml:space="preserve">
+    <value>Primes</value>
+  </data>
+  <data name="Radix" xml:space="preserve">
+    <value>Radix</value>
+  </data>
+  <data name="RadixConverterPageTitle" xml:space="preserve">
+    <value>Radix converter</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="RussianAlphabet" xml:space="preserve">
+    <value>Russian alphabet</value>
+  </data>
+  <data name="SelectAlphabetPageTitle" xml:space="preserve">
+    <value>Select alphabet</value>
+  </data>
+  <data name="Separator" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="Subtract" xml:space="preserve">
+    <value>Subtract</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ToRadix" xml:space="preserve">
+    <value>To radix</value>
+  </data>
+  <data name="Turn" xml:space="preserve">
+    <value>Turn</value>
+  </data>
+  <data name="Unicode" xml:space="preserve">
+    <value>Unicode</value>
+    <comment>Not translated</comment>
+  </data>
+  <data name="UpperBound" xml:space="preserve">
+    <value>Upper bound</value>
+  </data>
+  <data name="VigenerePageTitle" xml:space="preserve">
+    <value>Alphabet shift</value>
+  </data>
+</root>

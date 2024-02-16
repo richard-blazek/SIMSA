@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:resources="clr-namespace:SIMSA.Resources"
+			 xmlns:viewmodels="clr-namespace:SIMSA.ViewModels"
+			 x:Class="SIMSA.Pages.Braille"
+			 x:DataType="viewmodels:BrailleVM"
+			 Title="{x:Static resources:AppResources.BraillePageTitle}">
+	<ContentPage.BindingContext>
+		<viewmodels:BrailleVM/>
+	</ContentPage.BindingContext>
+	<ContentView>
+		<ScrollView Style="{StaticResource Content}">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="240"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Label Text="{Binding Output}" Style="{StaticResource Output}" Grid.Row="0" Grid.ColumnSpan="3"/>
+				<Grid Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="60"/>
+						<RowDefinition Height="60"/>
+						<RowDefinition Height="60"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="60"/>
+						<ColumnDefinition Width="60"/>
+					</Grid.ColumnDefinitions>
+					<Grid.Resources>
+						<Style TargetType="Button">
+							<Setter Property="WidthRequest" Value="60"/>
+							<Setter Property="HeightRequest" Value="60"/>
+							<Setter Property="CornerRadius" Value="30"/>
+							<Setter Property="BorderWidth" Value="2"/>
+							<Setter Property="BorderColor" Value="#FFF"/>
+						</Style>
+					</Grid.Resources>
+					<Button BackgroundColor="{Binding ColorAt0}" Command="{Binding InvertAt}" CommandParameter="0" Grid.Row="0" Grid.Column="0"/>
+					<Button BackgroundColor="{Binding ColorAt1}" Command="{Binding InvertAt}" CommandParameter="1" Grid.Row="0" Grid.Column="1"/>
+					<Button BackgroundColor="{Binding ColorAt2}" Command="{Binding InvertAt}" CommandParameter="2" Grid.Row="1" Grid.Column="0"/>
+					<Button BackgroundColor="{Binding ColorAt3}" Command="{Binding InvertAt}" CommandParameter="3" Grid.Row="1" Grid.Column="1"/>
+					<Button BackgroundColor="{Binding ColorAt4}" Command="{Binding InvertAt}" CommandParameter="4" Grid.Row="2" Grid.Column="0"/>
+					<Button BackgroundColor="{Binding ColorAt5}" Command="{Binding InvertAt}" CommandParameter="5" Grid.Row="2" Grid.Column="1"/>
+				</Grid>
+				<Button Command="{Binding Clear}" Text="{x:Static resources:AppResources.Clear}" Grid.Row="2" Grid.Column="0"/>
+				<Button Command="{Binding Backspace}" Text="⌫" FontSize="20" Grid.Row="2" Grid.Column="1"/>
+				<Button Command="{Binding Confirm}" Text="{x:Static resources:AppResources.Confirm}" Grid.Row="2" Grid.Column="2"/>
+				<Button Command="{Binding Invert}" Text="{x:Static resources:AppResources.Invert}" Grid.Row="3" Grid.Column="0"/>
+				<Button Command="{Binding Mirror}" Text="{x:Static resources:AppResources.Mirror}" Grid.Row="3" Grid.Column="1"/>
+				<Button Command="{Binding Turn}" Text="{x:Static resources:AppResources.Turn}" Grid.Row="3" Grid.Column="2"/>
+			</Grid>
+		</ScrollView>
+	</ContentView>
+</ContentPage>

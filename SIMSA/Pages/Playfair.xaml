@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:resources="clr-namespace:SIMSA.Resources" xmlns:viewmodels="clr-namespace:SIMSA.ViewModels"
+			 x:Class="SIMSA.Pages.Playfair"
+			 x:DataType="viewmodels:PlayfairVM"
+			 Title="{x:Static resources:AppResources.PlayfairPageTitle}">
+	<ContentPage.BindingContext>
+		<viewmodels:PlayfairVM Replaced="Q"/>
+	</ContentPage.BindingContext>
+	<ContentView>
+		<ScrollView Style="{StaticResource Content}">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+				</Grid.RowDefinitions>
+				<Label Text="{Binding Output}" Style="{StaticResource Output}" Grid.ColumnSpan="3"/>
+				<Entry Text="{Binding Input, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.Text}" Grid.Row="1" Grid.ColumnSpan="3">
+					<Entry.Keyboard>
+						<Keyboard x:FactoryMethod="Create">
+							<x:Arguments>
+								<KeyboardFlags>CapitalizeCharacter</KeyboardFlags>
+							</x:Arguments>
+						</Keyboard>
+					</Entry.Keyboard>
+				</Entry>
+				<Entry Text="{Binding Key, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.Key}" Grid.Row="2" Grid.ColumnSpan="3">
+					<Entry.Keyboard>
+						<Keyboard x:FactoryMethod="Create">
+							<x:Arguments>
+								<KeyboardFlags>CapitalizeCharacter</KeyboardFlags>
+							</x:Arguments>
+						</Keyboard>
+					</Entry.Keyboard>
+				</Entry>
+				<Label Text="{x:Static resources:AppResources.OmittedLetter}" Style="{StaticResource Caption}" Grid.Row="3" Grid.ColumnSpan="2"/>
+				<Entry Text="{Binding Replaced, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.OmittedLetter}" Grid.Row="3" Grid.Column="2">
+					<Entry.Keyboard>
+						<Keyboard x:FactoryMethod="Create">
+							<x:Arguments>
+								<KeyboardFlags>CapitalizeCharacter</KeyboardFlags>
+							</x:Arguments>
+						</Keyboard>
+					</Entry.Keyboard>
+				</Entry>
+			</Grid>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

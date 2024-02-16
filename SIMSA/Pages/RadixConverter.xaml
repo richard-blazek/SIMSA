@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SIMSA.Resources"
+			 xmlns:viewmodels="clr-namespace:SIMSA.ViewModels"
+			 x:DataType="viewmodels:RadixConverterVM"
+			 x:Class="SIMSA.Pages.RadixConverter"
+             Title="{x:Static resources:AppResources.RadixConverterPageTitle}">
+	<ContentPage.BindingContext>
+		<viewmodels:RadixConverterVM FromRadix="10" ToRadix="2" Input="0"/>
+	</ContentPage.BindingContext>
+    <ContentView>
+		<ScrollView Style="{StaticResource Content}">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Label Text="{Binding Output}" Style="{StaticResource Output}" VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3"/>
+				<Entry Text="{Binding Input, Mode=TwoWay}" Keyboard="{Binding InputKeyboard}" Grid.Row="1" Grid.ColumnSpan="3"/>
+				<Entry Text="{Binding FromRadix, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.FromRadix}" Keyboard="Numeric" Grid.Row="2" Grid.Column="0"/>
+				<Label Text="→" FontSize="30" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center"/>
+				<Entry Text="{Binding ToRadix, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.ToRadix}" Keyboard="Numeric" Grid.Row="2" Grid.Column="2"/>
+			</Grid>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

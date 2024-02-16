@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:resources="clr-namespace:SIMSA.Resources"
+			 xmlns:viewmodels="clr-namespace:SIMSA.ViewModels"
+			 x:Class="SIMSA.Pages.Primes"
+			 x:DataType="viewmodels:PrimesVM"
+             Title="{x:Static resources:AppResources.PrimesPageTitle}">
+	<ContentPage.BindingContext>
+		<viewmodels:PrimesVM UpperBound="20"/>
+	</ContentPage.BindingContext>
+	<ContentView>
+		<ScrollView Style="{StaticResource Content}">
+			<StackLayout>
+				<Label Text="{x:Static resources:AppResources.FindPrimesUpTo}" Style="{StaticResource Caption}"/>
+				<Entry Text="{Binding UpperBound, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.UpperBound}" Keyboard="Numeric"/>
+				<Label Text="{Binding Count, StringFormat={x:Static resources:AppResources.PrimeCountFormat}}" Style="{StaticResource Caption}"/>
+				<Label Text="{Binding Output}"/>
+			</StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

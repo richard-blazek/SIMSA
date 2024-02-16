@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:resources="clr-namespace:SIMSA.Resources"
+			 xmlns:viewmodels="clr-namespace:SIMSA.ViewModels"
+			 x:DataType="viewmodels:EditAlphabetVM"
+             x:Class="SIMSA.Pages.EditAlphabet"
+			 Title="{x:Static resources:AppResources.EditAlphabetPageTitle}">
+	<ContentView>
+		<ScrollView Style="{StaticResource Content}">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Entry Text="{Binding Name, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.AlphabetName}" Grid.Row="0" Grid.ColumnSpan="2"/>
+				<Entry Text="{Binding Letters, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.LettersOfTheAlphabet}" IsSpellCheckEnabled="false" Grid.Row="1" Grid.ColumnSpan="2">
+					<Entry.Keyboard>
+						<Keyboard x:FactoryMethod="Create">
+							<x:Arguments>
+								<KeyboardFlags>CapitalizeCharacter</KeyboardFlags>
+							</x:Arguments>
+						</Keyboard>
+					</Entry.Keyboard>
+				</Entry>
+				<Button Text="{x:Static resources:AppResources.Confirm}" Command="{Binding Save}" Clicked="Close" Grid.Row="2" Grid.Column="0"/>
+				<Button Text="{x:Static resources:AppResources.Delete}" Command="{Binding Delete}" Clicked="Close" Grid.Row="2" Grid.Column="1"/>
+			</Grid>
+		</ScrollView>
+	</ContentView>
+</ContentPage>

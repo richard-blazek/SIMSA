@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SIMSA.Resources"
+			 xmlns:viewmodels="clr-namespace:SIMSA.ViewModels"
+			 xmlns:models="clr-namespace:SIMSA.Models"
+			 x:DataType="viewmodels:FrequencyAnalysisVM"
+             x:Class="SIMSA.Pages.FrequencyAnalysis"
+             Title="{x:Static resources:AppResources.FrequencyAnalysisPageTitle}">
+	<ContentPage.BindingContext>
+		<viewmodels:FrequencyAnalysisVM/>
+	</ContentPage.BindingContext>
+	<ContentView>
+		<Grid Style="{StaticResource Content}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="190"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Editor Text="{Binding Input, Mode=TwoWay}" Placeholder="{x:Static resources:AppResources.Text}" IsSpellCheckEnabled="False" Grid.ColumnSpan="2">
+				<Editor.Keyboard>
+					<Keyboard x:FactoryMethod="Create">
+						<x:Arguments>
+							<KeyboardFlags>CapitalizeCharacter</KeyboardFlags>
+						</x:Arguments>
+					</Keyboard>
+				</Editor.Keyboard>
+			</Editor>
+			<Button Command="{Binding Analyse}" Text="{x:Static resources:AppResources.Analyse}" Grid.Row="1" Grid.Column="0"/>
+			<Button Command="{Binding SwitchLanguage}" Text="{Binding LanguageName}" Grid.Row="1" Grid.Column="1"/>
+			<CollectionView ItemsSource="{Binding AnalysisOutput}" Grid.Row="2" Grid.Column="0">
+				<CollectionView.ItemTemplate>
+					<DataTemplate x:DataType="models:LetterFrequency">
+						<FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Margin="10,0">
+							<Label Text="{Binding Letter}"/>
+							<Label Text="{Binding Frequency, StringFormat='{0:P2}'}"/>
+						</FlexLayout>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+			<CollectionView ItemsSource="{Binding LanguageOutput}" Grid.Row="2" Grid.Column="1">
+				<CollectionView.ItemTemplate>
+					<DataTemplate x:DataType="models:LetterFrequency">
+						<FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Margin="10,0">
+							<Label Text="{Binding Letter}"/>
+							<Label Text="{Binding Frequency, StringFormat='{0:P2}'}"/>
+						</FlexLayout>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</Grid>
+	</ContentView>
+</ContentPage>
